@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery 練習</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/icon-style.css" rel="stylesheet" type="text/css">
+    <style>
+        /*CSS code*/
+    </style>
+</head>
+<body>
+
+    <!--第三章 tag、class、id、attribute selector 練習-->
+    <div class="container" id="HyperlinkArea">
+        <div class="row hyperlink">
+            <label custom>
+                <a href="https://www">bank1</a>
+            </label>
+        </div>
+        <div class="row hyperlink">
+            <label custom="Hyperlink">
+                <a href="https://ebank">bank2</a>
+            </label>
+        </div>
+    </div>
+
+    <!--第六章 append()、prepend()、before()、after() 練習-->
+    <div class="container" id="DOM_Insert">
+
+        <div class="row">
+            <label>標籤A</label>
+        </div>
+        <div class="row">
+            <label>標籤B</label>
+        </div>
+
+    </div>
+
+    <!--第六章 empty()、remove()、prev()、next()、siblings() 練習-->
+    <!--第八章 change() 事件練習-->
+    <div class="container" id="select_sample">
+        <div class="row">
+            <div class='col-sm-6'>
+                <div class="form-group">
+                    <label>地點</label>
+                    <select class="form-control" id="select_location">
+                        <option value=""></option>
+                        <option value="C01">台北</option>
+                        <option value="C02">新北</option>
+                        <option value="C03" selected>桃園</option>
+                        <option value="C04">台中</option>
+                        <option value="C05">台南</option>
+                        <option value="C06">高雄</option>
+                    </select>
+                    <label style="color:red" id="alert_label">尚未選擇！</label>
+                </div>
+            </div>
+            <div class='col-sm-2'>
+                <div class="form-group">
+                    <button id="check_place" class="btn btn-primary" onclick="checkifEmpty()">檢核</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--第五章 大於、空白selector 練習-->
+    <!--第八章 change() 事件練習-->
+    <!--第十一章 each() 方法練習-->
+    <div class="container" id="select_group_sample">
+        <div class="row">
+            <div class='col-sm-6'>
+                <div class="form-group">
+                    <label>區域</label>
+                    <select id="AreaSelect" class="form-control">
+                        <option value="A01">基隆</option>
+                        <option value="A02">桃園</option>
+                        <optgroup label="台北">
+                            <option value="A03">中山</option>
+                            <option value="A04">大同</option>
+                        </optgroup>
+                        <optgroup label="宜蘭">
+                            <option value="A05">礁溪</option>
+                            <option value="A06">頭城</option>
+                        </optgroup>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--第五章 連續 selector 練習-->
+    <!--第六章 find()、closest() 方法練習-->
+    <!--第七章 prop()、attr() 方法練習-->
+    <!--第八章 click() 事件練習-->
+    <div class="container" id="checkbox_demo">
+        <div class="row">
+            <div class='col-sm-2'>
+                <div class="form-group">
+                    <b>CHECKBOX</b>
+                </div>
+            </div>
+            <div class='col-sm-2'>
+                <input type='checkbox' id="check1" value="check1" checked />
+                <label for="check1">標籤一</label>
+            </div>
+            <div class='col-sm-2'>
+                <input type='checkbox' id="check2" value="check2" />
+                <label for="check2">標籤二</label>
+            </div>
+            <div class='col-sm-2'>
+                <input type='checkbox' id="check3" value="check3" checked />
+                <label for="check3">標籤三</label>
+            </div>
+            <div class='col-sm-2'>
+                <input type='checkbox' id="check4" value="check4" />
+                <label for="check4">標籤四</label>
+            </div>
+        </div>
+    </div>
+
+    <!--第六章 children()、parent() 方法練習-->
+    <!--第七章 html()、text()、val()、prop()、attr() 練習-->
+    <div class="container" id="outerDiv">
+        <div class="row" id="innerDiv">
+            <div class="form-group">
+                <label>這是一個標籤</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class='col-sm-6'>
+                <div class="form-group">
+                    <input type='text' class="form-control" value="12345" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--第五章 連續、多個multiple selector 練習-->
+    <!--第八章 click() 事件練習-->
+    <!--第十章 hide()、show()、toggle()、animate() 效果練習-->
+    <div class="container" id="btn_Area">
+        <div class="row">
+            <div class='col-sm-2'>
+                <div class="form-group">
+                    <b>ButtonArea</b>
+                </div>
+            </div>
+            <div class='col-sm-2'>
+                <button id="btn1" class="btn btn-primary">Button1</button> <!--onclick="btnclick()"-->
+            </div>
+            <div class='col-sm-2'>
+                <button id="btn2" class="btn-primary">Button2</button>
+            </div>
+            <div class='col-sm-2'>
+                <button id="btn3" class="btn-primary">Button3</button>
+            </div>
+            <div class='col-sm-2'>
+                <button id="btn4" class="btn">Button4</button>
+            </div>
+            <div class='col-sm-2'>
+                <button id="btn5" class="btn">Button5</button>
+            </div>
+        </div>
+    </div>
+
+    <!--第九章 on 事件練習-->
+    <div class="container" id="text_sample">
+        <div class="row">
+            <b>TextSample</b>
+        </div>
+        <button id="addbutton" type="button" class="btn btn-primary">
+            <div class="icon-plus"></div>
+        </button>
+        <button id="removebutton" type="button" class="btn btn-primary">
+            <div class="icon-cross"></div>
+        </button>
+        <div class="row">
+            <div class='col-sm-6'>
+                <label>InputText</label>
+                <div class="form-group" id="input_control">
+                    <input type='text' class="form-control" /><br>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class='col-sm-6'>
+                <label>TextArea</label>
+                <textarea id="textareabox" class="form-control" rows="3">輸入訊息</textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class='col-sm-6'>
+                <label></label>
+                <textarea id="textareabox2" class="form-control" rows="3" disabled></textarea>
+            </div>
+        </div>
+    </div>
+
+        <!--第十二章 get() 方法練習-->
+        <!--第十三章 ajax() 方法練習-->
+        <div class="container" id="org_sample">
+            <div class="row">
+                <div class="form-group">
+                    <b>TabelArea</b>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <table class="table table-bordered" id="unit_table">
+                            <thead>
+                                <tr>
+                                    <th>部門</th>
+                                    <th>科別</th>
+                                    <th>人員</th>
+                                    <th>RadioButton</th>
+                                    <th><button type="button" class="btn btn-primary" id="add_row"><div class="icon-plus"></div></button></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <select id="department" class="form-control department" >
+                                            <option value="">請選擇</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select disabled id="team" class="form-control team" >
+                                            <option value="">請選擇</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select disabled id="employer" class="form-control employer">
+                                            <option value="">請選擇</option>
+                                        </select>
+                                    </td>
+                                    <td class="form-inline">
+                                        <div class="form-group">
+                                            <input class="form-check-input" id="radio1" name="radiogroup1" type="radio" value="true">
+                                            <label class="form-check-label" for="radio1">是</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input class="form-check-input" id="radio2" name="radiogroup1" type="radio" value="false">
+                                            <label class="form-check-label" for="radio2">否</label>
+                                        </div>
+                                    </td>
+                                    <td><button type="button" class="btn btn-primary remove"><div class="icon-cross"></div></button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--file-->
+        <div class="container" id="file_sample">
+            <div class="row">
+                <div class='col-sm-2'>
+                    <label>InputText</label>
+                    <div class="form-group">
+                        <input type="file" id="fileinput">
+                    </div>
+                </div>
+                <div class='col-sm-2'>
+                    <label></label>
+                    <div class="form-group">
+                        <button id="fileupload" class="btn">fileupload</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</body>
+</html>
+<script src="js/jquery-3.4.1.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/moment.js"></script>
+<script src="js/practice.js"></script>
+<script>
+    $(document).ready(function(){
+        // q1
+        function checkifEmpty() { 
+            if ($("#select_location").val() === "") {
+                $("#alert_label").show();
+            }
+            else{
+                var label = $("#select_location").find(':selected').text();
+                $("#alert_label").hide();
+                alert("您選擇的地點是："+label);
+            }
+        }; 
+        // q2
+        $("#textareabox").on("change keyup paste", function () {
+            var currentVal = $(this).val();
+            $("#textareabox2").prop('disabled', false);
+            $("#textareabox2").val('"'+currentVal+'"');
+        });
+        //q3
+        $("input[type=checkbox]").click(function(){
+            var countchecked = $("input[type=checkbox]:checked").length;
+            if(countchecked >= 3) {
+                $("input[type=checkbox]").not(':checked').attr("disabled",true);
+            }
+            else{
+                $("input[type=checkbox]").not(':checked').attr("disabled",false);
+            }
+        });
+        //q4
+        $("#addbutton").on("click", function() {  
+            $("#input_control").append("<div><br><input type='text' class='form-control'/><br></div>");  
+        });  
+        $("#removebutton").on("click", function() {  
+            $("#input_control").children().last().remove();  
+        }); 
+        //q6
+        $('#unit_table tr').each(function() {
+            $.ajax({
+                url: '../OrgData/Unit/Unit0532.json',
+                contentType:'application/json',
+                dataType:'json',
+                success: function (response) {
+                    $('#department').empty();
+                    $.each(response, function () {
+                        $('#department').append(
+                            $('<option></option>').val(this.unit_id).text(this.unit_name)
+                        );
+                    });
+                },
+            });
+        });
+
+
+        //q7
+        function apply_team(e){
+            var dep_id = $(e).val();
+            $('#team').removeAttr('disabled');
+            $.ajax({
+                url: '../OrgData/Unit/Unit'+dep_id+'.json',
+                dataType: 'json',
+                success: function (response) {
+                    $('#team').empty();
+                    $.each(response, function () {
+                        $('#team').append(
+                            $('<option></option>').val(this.unit_id).text(this.unit_name)
+                        );
+                    });
+                },
+            });    
+        };
+
+        function apply_employer(e){
+            var dep_id = $(e).val();
+            $('#employer').removeAttr('disabled');
+            $.ajax({
+                url: '../OrgData/User/'+dep_id+'.json',
+                dataType: 'json',
+                success: function (response) {
+                    $('#employer').empty();
+                    $.each(response, function () {
+                        $('#employer').append(
+                            $('<option></option>').val(this.user_id).text(this.user_name)
+                        );
+                    });
+                },
+            });    
+        };
+        $("#department").change(function(){
+            apply_team(this);
+        });
+        $("#team").change(function(){
+            apply_employer(this);
+        });
+        
+
+        //q8
+        $("#add_row").click(function () {
+            $("#unit_table").each(function () {
+                var tds = '<tr>';
+                jQuery.each($('tr:last td', this), function () {
+                    tds += '<td>' + $(this).html() + '</td>';
+                });
+                tds += '</tr>';
+                if ($('tbody', this).length > 0) {
+                    $('tbody', this).append(tds);
+                } 
+                else {
+                    $(this).append(tds);
+                }
+            });
+        });
+
+        //q9
+        $("#unit_table").on('click', '.remove', function () {
+            var rowlength = $("#unit_table tr").length;
+            console.log(rowlength)
+            if(rowlength > 2){
+                $(this).closest('tr').remove();
+            }
+            else{
+                alert("只剩一個row了，無法刪除");
+            }
+        });
+    
+    });
+
+</script> 
+<script>
+    //javascript code
+
+    //一維陣列
+    const array_1 = ["AAA", "BBB", "CCC"];
+    //二維陣列
+    const array_2 = [["AAA", "BBB", "CCC"]
+        , ["123", "456", "789"]
+        , ["XXX", "YYY", "ZZZ"]];
+    //object
+    const obj_1 = {
+        id: "131313",
+        name: "王OO",
+        unit: "資訊處"
+    };
+    //object in Array
+    const array_3 = [{ id: "BANK", name: "銀行" },
+    { id: "FHC", name: "金控" },
+    { id: "SEC", name: "證券" }];
+
+    //第十一章 jQuery.each() 練習
+    const array_4 =
+        [{
+            companyid: "BANK", companyName: "銀行", member: [
+                { id: "A1313", name: "陸仁甲", unit: "管理處" },
+                { id: "B1313", name: "陸仁乙", unit: "會計處" },
+                { id: "C1313", name: "陸仁丙", unit: "人資處" }
+            ]
+        }, {
+            companyid: "FHC", companyName: "金控", member: [
+                { id: "L1313", name: "陸仁丁" },
+                { id: "M1313", name: "陸仁戊" },
+                { id: "N1313", name: "陸仁已" }
+            ]
+        }, {
+            companyid: "SEC", companyName: "證券", member: [
+                { id: "X1313", name: "陸仁庚" },
+                { id: "Y1313", name: "陸仁辛" },
+                { id: "Z31313", name: "陸仁壬" }
+            ]
+        }];
+
+    //q5
+    $.each(array_4, function(index1, item1){
+        $.each(item1.member, function(index2, item2){
+            $.each(item2, function(index3, item3){
+                console.log('Array['+index1+'].'+'member['+index2+'].'+item3);
+            });
+            
+        });
+    });
+    
+</script>
